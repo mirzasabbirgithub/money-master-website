@@ -62,6 +62,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             const savePercetageTotal = parseFloat(savePertageValue);
             //calculate percentage
             percetageTotal = (savePercetageTotal * totalAmount) / 100;
+            logicPart(savePercetageTotal);
 
             //savings amount
             const savingsTotal = document.getElementById('savings-amount');
