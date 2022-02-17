@@ -1,4 +1,4 @@
-//function
+//create a function
 function logicPart(givenValue) {
     if (isNaN(givenValue)) {
         alert('Value must be number');
@@ -10,6 +10,7 @@ function logicPart(givenValue) {
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
+    //food part
     const food = document.getElementById('foodCost');
     const foodExpenses = food.value;
     const foodExpensesTotal = parseFloat(foodExpenses);
@@ -44,17 +45,13 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     //balance 
     const totalFinalBalance = totalAmount - totalCost;
 
-
-    //balance replaced
     const totalBalance = document.getElementById('last-balance');
     totalBalance.innerText = totalFinalBalance;
 
+    //error message if expense is larger than income
     if (totalCost > totalAmount) {
-        alert("You expense should not be larger then your income");
+        alert("You expense should not be larger than your income");
     } else {
-
-
-
         //savings
         document.getElementById('save-btn').addEventListener('click', function () {
             const savePercetage = document.getElementById('save-percentage');
@@ -68,13 +65,11 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             const savingsTotal = document.getElementById('savings-amount');
             savingsTotal.innerText = percetageTotal;
 
-            //error message for savings
+            //error message if savings amount is larger than current balance
             if (percetageTotal > totalFinalBalance) {
                 alert("You don't have enough money to save");
             }
             else {
-
-
                 //remaining balance
                 remainingTotalBalance = totalFinalBalance - percetageTotal;
 
@@ -84,9 +79,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
         });
     }
-
-
-
 
 });
 
