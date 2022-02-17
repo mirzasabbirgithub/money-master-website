@@ -37,7 +37,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         const savePertageValue = savePercetage.value;
         const savePercetageTotal = parseFloat(savePertageValue);
         //calculate percentage
-        percetageTotal = (savePercetageTotal * totalFinalBalance) / 100;
+        percetageTotal = (savePercetageTotal * totalAmount) / 100;
 
         //savings amount
         const savingsTotal = document.getElementById('savings-amount');
